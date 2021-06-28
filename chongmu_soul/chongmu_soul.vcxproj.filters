@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quelldateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien\data">
+      <UniqueIdentifier>{03bc83bf-fd8a-49a2-abe1-bc3a9abf8b48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\data\entity">
+      <UniqueIdentifier>{063c3f1c-5fbd-4d52-b3bf-1c8ff577139f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\data\entity\character">
+      <UniqueIdentifier>{9ef95cf1-f770-4028-9a23-232119f37a6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\data\entity\item">
+      <UniqueIdentifier>{acdf32c0-bee7-4f19-8434-d1fbfad9b910}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\data\entity\place">
+      <UniqueIdentifier>{aa5a4962-12b8-43a0-8c34-8d81044529db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\data\stage">
+      <UniqueIdentifier>{4e1c6773-dee0-4d84-8f5f-392770c545b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\ui">
+      <UniqueIdentifier>{752a691f-586c-4b82-b4b7-1955d8761193}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\ui\menu">
+      <UniqueIdentifier>{5ac5f19c-17f4-4da3-b3de-08f141c13c60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\ui\control">
+      <UniqueIdentifier>{33ef4325-384a-43ed-8edf-667e2a0c76a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\ui\explore">
+      <UniqueIdentifier>{7f030437-b054-4eb7-af1b-789bde634049}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="entity\entity.h">
+      <Filter>Headerdateien\data\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="entity\enum.h">
+      <Filter>Headerdateien\data\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="entity\character\character.h">
+      <Filter>Headerdateien\data\entity\character</Filter>
+    </ClInclude>
+    <ClInclude Include="entity\item\inventory.h">
+      <Filter>Headerdateien\data\entity\item</Filter>
+    </ClInclude>
+    <ClInclude Include="entity\item\item.h">
+      <Filter>Headerdateien\data\entity\item</Filter>
+    </ClInclude>
+    <ClInclude Include="entity\place\place.h">
+      <Filter>Headerdateien\data\entity\place</Filter>
+    </ClInclude>
+    <ClInclude Include="stage\stage.h">
+      <Filter>Headerdateien\data\stage</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\menu\menus.h">
+      <Filter>Headerdateien\ui\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\control\cwindow.h">
+      <Filter>Headerdateien\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\control\cstring.h">
+      <Filter>Headerdateien\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\control\scanifier.h">
+      <Filter>Headerdateien\ui\control</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\menu\sequences.h">
+      <Filter>Headerdateien\ui\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="stage\battle.h">
+      <Filter>Headerdateien\data\stage</Filter>
+    </ClInclude>
+    <ClInclude Include="entity\character\effect.h">
+      <Filter>Headerdateien\data\entity\character</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\control\walls.h">
+      <Filter>Headerdateien\ui\menu</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="flowcontrol.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="entity\entity.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="entity\character\character.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="entity\item\inventory.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="entity\item\item.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="entity\place\place.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="stage\stage.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
