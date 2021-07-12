@@ -1,22 +1,28 @@
 #pragma once
+#include "../../afx.h"
+#include "afxitem.h"
 #include "../enum.h"
 #include "../item/item.h"
+#include "../character/effect.h"
 
-typedef struct {
-  union {
-    unsigned char atk : 8;
-    unsigned char def : 8;
-  };
-  unsigned int code : 16;
+
+typedef struct ItemStats {
+  unsigned char atk : MAX_ATK_IN_BIT;
+  unsigned char def : MAX_DEF_IN_BIT;
 } ItemStats;
 
-typedef struct {
-  char name[80];
-  char description[110];
+typedef struct Item {
+  void* addressEntity;
+  unsigned int id;
+  char description[TXTAREA_WIDTH];
   ItemType type;
   ItemStats stats;
-  DebuffType isDebuff;
+  Effect* e;
 } Item;
 
-Item* createItem(char name[], char description[], ItemType type, unsigned char atk, unsigned char def, DebuffType debuff);
+Item* createItem(unsigned int id, char description[], ItemType type, unsigned char atk, unsigned char def, Effect* e);
+char* getItemName(Item* i);
+char** getItemAsChar(Item* i);
+int getItemAttack(Item* i);
+int getItemDefense(Item* i);
 void deleteItem(Item* i);

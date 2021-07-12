@@ -1,12 +1,17 @@
 #include "place.h"
+#include "../entity.h"
+#include <stdlib.h>
 
-Place* createPlace(char name[], PlaceType type) {
+Place * createPlace(PlaceType type){
   Place* p = (Place*)malloc(sizeof(Place));
 
-  memcpy(p->name, name, sizeof(name));
   p->type = type;
 
-  return convertEntity(PLACE, p);
+  return p;
+}
+
+char* getPlaceName(Place* p) {
+  return ((Entity*)p->addressEntity)->name;
 }
 
 void deletePlace(Place * p){

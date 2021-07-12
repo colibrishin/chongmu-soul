@@ -1,11 +1,16 @@
 #pragma once
-#include "../item/item.h"
+#include "./../../afx.h"
+#include "item.h"
 
-typedef struct {
-  int max_size;
+typedef struct Inventory {
+  int size;
   int occupied;
-  Item** items;
+  Item* items[MAX_INVENTORY_SIZE];
 } Inventory;
 
-Inventory* createInventory(int max_size);
-void addItem(Inventory* in, Item* i);
+Inventory* createInventory(int size);
+char** getAllItemNames(Inventory *in);
+Item** getUseableItem(Inventory* i);
+int getUseableItemCount(Inventory *in);
+void deleteItemFromInventory(Inventory* in, Item* i, int n);
+int addItem(Inventory* in, Item* i);

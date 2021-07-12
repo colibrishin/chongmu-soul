@@ -1,11 +1,20 @@
-﻿#include <stdio.h>
+﻿#include "ui/menu/sequences.h"
 #include "ui/control/cwindow.h"
-#include "ui/menu/sequences.h"
 
-int main(void) {
+void main(void) {
+  Stage* current_stage[STAGE_N_REFSTAGE];
+  MoveReturn r;
+
 	setTitle("Chongmu Soul");
 	getHandle();
 	Splash();
-  mainMenu();
-  exploreMenu(newGame());
+
+  memcpy(current_stage, mainMenu(), STAGE_N_REFSTAGE * sizeof(Stage*));
+  if (current_stage == NULL) return;
+
+  while(1) {
+    r = exploreMenu(current_stage);
+    if (r == DIED) diedMenu(NULL, current_stage);
+    if (r == FIGHT) battleMenu(current_stage[CURRENT_STAGE]);
+  }
 }

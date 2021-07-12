@@ -116,30 +116,40 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="afx.h" />
     <ClInclude Include="entity\character\character.h" />
+    <ClInclude Include="entity\character\afxcharacter.h" />
     <ClInclude Include="entity\character\effect.h" />
     <ClInclude Include="entity\entity.h" />
     <ClInclude Include="entity\enum.h" />
+    <ClInclude Include="entity\item\afxitem.h" />
     <ClInclude Include="entity\item\inventory.h" />
     <ClInclude Include="entity\item\item.h" />
+    <ClInclude Include="entity\place\afxplace.h" />
     <ClInclude Include="entity\place\place.h" />
+    <ClInclude Include="save\io.h" />
     <ClInclude Include="stage\battle.h" />
+    <ClInclude Include="stage\afxstage.h" />
     <ClInclude Include="stage\stage.h" />
-    <ClInclude Include="ui\control\walls.h" />
     <ClInclude Include="ui\control\cstring.h" />
     <ClInclude Include="ui\control\cwindow.h" />
-    <ClInclude Include="ui\control\scanifier.h" />
     <ClInclude Include="ui\menu\menus.h" />
     <ClInclude Include="ui\menu\sequences.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="entity\character\character.c" />
+    <ClCompile Include="entity\character\effect.c" />
     <ClCompile Include="entity\entity.c" />
     <ClCompile Include="entity\item\inventory.c" />
     <ClCompile Include="entity\item\item.c" />
     <ClCompile Include="entity\place\place.c" />
     <ClCompile Include="flowcontrol.c" />
+    <ClCompile Include="stage\battle.c" />
     <ClCompile Include="stage\stage.c" />
+    <ClCompile Include="ui\control\cstring.c" />
+    <ClCompile Include="ui\control\cwindow.c" />
+    <ClCompile Include="ui\menu\menus.c" />
+    <ClCompile Include="ui\sequence.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -40,8 +40,17 @@
     <Filter Include="Headerdateien\ui\control">
       <UniqueIdentifier>{33ef4325-384a-43ed-8edf-667e2a0c76a8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Headerdateien\ui\explore">
-      <UniqueIdentifier>{7f030437-b054-4eb7-af1b-789bde634049}</UniqueIdentifier>
+    <Filter Include="Headerdateien\data\save">
+      <UniqueIdentifier>{4b65065c-95f0-4170-b548-1ead7bba7a3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\stage">
+      <UniqueIdentifier>{c752a28c-d2c2-4aaa-8d2f-9bf74883457f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\ui">
+      <UniqueIdentifier>{9828814c-b23a-49a6-b63f-d7f98b297faf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\data">
+      <UniqueIdentifier>{07cbb6dc-c223-47ff-acc3-1e1bd9bdf7fa}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -75,43 +84,73 @@
     <ClInclude Include="ui\control\cstring.h">
       <Filter>Headerdateien\ui\control</Filter>
     </ClInclude>
-    <ClInclude Include="ui\control\scanifier.h">
-      <Filter>Headerdateien\ui\control</Filter>
-    </ClInclude>
     <ClInclude Include="ui\menu\sequences.h">
       <Filter>Headerdateien\ui\menu</Filter>
-    </ClInclude>
-    <ClInclude Include="stage\battle.h">
-      <Filter>Headerdateien\data\stage</Filter>
     </ClInclude>
     <ClInclude Include="entity\character\effect.h">
       <Filter>Headerdateien\data\entity\character</Filter>
     </ClInclude>
-    <ClInclude Include="ui\control\walls.h">
-      <Filter>Headerdateien\ui\menu</Filter>
+    <ClInclude Include="stage\battle.h">
+      <Filter>Headerdateien\data\stage</Filter>
+    </ClInclude>
+    <ClInclude Include="save\io.h">
+      <Filter>Headerdateien\data\save</Filter>
+    </ClInclude>
+    <ClInclude Include="afx.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="stage\afxstage.h">
+      <Filter>Headerdateien\data\stage</Filter>
+    </ClInclude>
+    <ClInclude Include="entity\place\afxplace.h">
+      <Filter>Headerdateien\data\entity\place</Filter>
+    </ClInclude>
+    <ClInclude Include="entity\item\afxitem.h">
+      <Filter>Headerdateien\data\entity\item</Filter>
+    </ClInclude>
+    <ClInclude Include="entity\character\afxcharacter.h">
+      <Filter>Headerdateien\data\entity\character</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="flowcontrol.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="entity\entity.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="entity\character\character.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="entity\item\inventory.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="entity\item\item.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="entity\place\place.c">
-      <Filter>Quelldateien</Filter>
+    <ClCompile Include="stage\battle.c">
+      <Filter>Quelldateien\stage</Filter>
     </ClCompile>
     <ClCompile Include="stage\stage.c">
-      <Filter>Quelldateien</Filter>
+      <Filter>Quelldateien\stage</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\menu\menus.c">
+      <Filter>Quelldateien\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\sequence.c">
+      <Filter>Quelldateien\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="entity\entity.c">
+      <Filter>Quelldateien\data</Filter>
+    </ClCompile>
+    <ClCompile Include="entity\item\inventory.c">
+      <Filter>Quelldateien\data</Filter>
+    </ClCompile>
+    <ClCompile Include="entity\item\item.c">
+      <Filter>Quelldateien\data</Filter>
+    </ClCompile>
+    <ClCompile Include="entity\place\place.c">
+      <Filter>Quelldateien\data</Filter>
+    </ClCompile>
+    <ClCompile Include="entity\character\character.c">
+      <Filter>Quelldateien\data</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\control\cstring.c">
+      <Filter>Quelldateien\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\control\cwindow.c">
+      <Filter>Quelldateien\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="entity\character\effect.c">
+      <Filter>Quelldateien\data</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

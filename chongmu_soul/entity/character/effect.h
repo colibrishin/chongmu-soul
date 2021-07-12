@@ -1,20 +1,22 @@
 #pragma once
 
-typedef struct {
-  int max_chance;
+typedef struct Critical {
   int chance;
-  unsigned int* crit;
+  float increasement;
 } Critical;
 
-typedef struct {
-  int inc;
-  int atk_stack;
-} AttackIncreasement;
+typedef struct HPGeneration {
+  int perhp;
+  int interval;
+} HPGeneration;
 
-typedef struct {
-  int hp_gen;
-  AttackIncreasement* a;
-  Critical* c;
+typedef struct Effect {
+  unsigned char drunk;
+  unsigned char immune;
+  HPGeneration h;
+  Critical c;
 } Effect;
 
-Critical* createEffectCritical(int chance);
+Effect* createEffect(int chance, unsigned char drunk, unsigned char immune);
+void setEffectFromEffect(Effect* dst, Effect* src);
+

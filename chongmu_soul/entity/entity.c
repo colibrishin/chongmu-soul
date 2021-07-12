@@ -1,22 +1,68 @@
+#include "../afx.h"
 #include "entity.h"
 #include <stdlib.h>
+#include <string.h>
 
-Entity* convertEntity(void* data, EntityType type) {
-  Entity* ret = malloc(sizeof(Entity));
-  ret->type = type;
 
-  switch (ret->type) {
+Entity * createEntity(char name[], EntityType type, void * data){
+  Entity* e = (Entity*)malloc(sizeof(Entity));
+
+  e->type = type;
+  copyStringTXTAREA(e->name, name);
+
+  switch (e->type) {
   case CHARACTER:
-    ret->data.c = (Character*)data;
+    e->data.c = (Character*)data;
+    ((Character*)data)->addressEntity = e;
     break;
   case ITEM:
-    ret->data.i = (Item*)data;
+    e->data.i = (Item*)data;
+    ((Item*)data)->addressEntity = e;
     break;
   case PLACE:
-    ret->data.p = (Place*)data;
+    e->data.p = (Place*)data;
+    ((Place*)data)->addressEntity = e;
     break;
   }
-  return ret;
+
+  return e;
+}
+
+void* getEntityData(Entity* e){
+  switch (e->type) {
+  case CHARACTER:
+    return (Character*)e->data.c;
+  case ITEM:
+    return (Item*)e->data.i;
+  case PLACE:
+    return (Place*)e->data.p;
+  }
+  return NULL;
+}
+
+EntityType getEntityType(Entity * e){
+  return e->type;
+}
+
+C_EntityType getCEntityType(Entity * e){
+  switch (e->type) {
+  case CHARACTER:
+    return C_CHARACTER;
+  case ITEM:
+    return C_ITEM;
+  case PLACE:
+    switch (e->data.p->type) {
+    case WAY:
+      return C_WAY;
+    case BONFIRE:
+      return C_BONFIRE;
+    case DOOR:
+      return DOOR;
+    case OBSTACLE:
+      return C_OBSTACLE;
+    }
+  }
+  return ENUM_NULL;
 }
 
 void * getEntityProperty(Entity * e){

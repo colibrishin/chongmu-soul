@@ -1,22 +1,25 @@
 #pragma once
-#include <stdio.h>
+#include "../afx.h"
 #include "../entity/enum.h"
 #include "../entity/character/character.h"
 #include "../entity/item/item.h"
 #include "../entity/place/place.h"
 
-typedef union {
+typedef union uData {
   Character* c;
   Item* i;
   Place *p;
 } uData;
 
-typedef struct {
+typedef struct Entity {
+  char name[TXTAREA_WIDTH];
   EntityType type;
   uData data;
 } Entity;
 
-Entity* convertEntity(void* data, EntityType type);
-void* getEntityProperty(Entity* e);
+Entity* createEntity(char name[], EntityType type, void* data);
+void* getEntityData(Entity* e);
+EntityType getEntityType(Entity* e);
+C_EntityType getCEntityType(Entity* e);
 void setEntityProperty(Entity *e, EntityType type, void* data);
 void deleteEntity(Entity * e);
